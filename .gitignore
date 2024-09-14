@@ -7,3 +7,5 @@ node_modules/
 
 # Configuration file
 src/config/config.json
+
+my.md

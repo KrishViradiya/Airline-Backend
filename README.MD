@@ -1,21 +1,22 @@
-/ 
-    -src
-        -index.js
-        -models/
-        -controllers/
-        -middlewares/
-        -services/
-        -utils/
-        -config/
-        -repository/ 
-    -tests/ [later]
-/
+# Welcome to airline Backend
 
-The `src` directory contains the core application logic. This structure is designed with production deployment in mind. When deploying to production, only the `src` folder needs to be included, while other directories like `tests`, temporary files, and configuration files can be excluded. This approach follows best practices for directory structure, ensuring:
+## Project Setup
 
-1. Clear separation of concerns
-2. Easier deployment and maintenance
-3. Improved security by not exposing non-essential files in production
-4. Better organization for scalability
+- clone the project in your local
+- Execute `npm install` on the same path as of your root directory of the downoaded project
+- Create a new `.env` file in the root directory and add the following environment variable
+  - `PORT=3000`
+- Inside the `src/config` folder create a new file and name it `config.json` and then add the following piece of json data
 
-By keeping all essential logic within the `src` folder, we maintain a clean and efficient codebase that's ready for both development and production environments.
+```
+        {
+  "development": {
+    "username": <YOUR_DB_LOGIN>,
+    "password": <YOUR_DB_PASSWORD>,
+    "database": <YOUR_DB_NAME>,
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+         }
+        }
+
+```
