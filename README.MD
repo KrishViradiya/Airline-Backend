@@ -10,13 +10,13 @@
 
 ```
         {
-  "development": {
-    "username": <YOUR_DB_LOGIN>,
-    "password": <YOUR_DB_PASSWORD>,
-    "database": <YOUR_DB_NAME>,
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-         }
+            "development": {
+                "username": <YOUR_DB_LOGIN>,
+                "password": <YOUR_DB_PASSWORD>,
+                "database": <YOUR_DB_NAME>,
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+             }
         }
 
 ```
