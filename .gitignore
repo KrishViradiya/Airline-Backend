@@ -6,4 +6,4 @@ node_modules/
 .env
 
 # Configuration file
-src/Config/config.json
+src/config/config.json
