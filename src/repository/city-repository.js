@@ -7,6 +7,7 @@ class CityRepository {
            return city;
             
         } catch (error) {
+            console.log("Error while creating city")
             throw {error}
         }
     }
@@ -20,6 +21,7 @@ class CityRepository {
             })
             return true;
         } catch (error) {
+            console.log("Error while deleting city")
             throw {error}
         }
     }
