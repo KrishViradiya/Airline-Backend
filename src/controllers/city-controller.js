@@ -1,3 +1,4 @@
+
 const {CityService} = require('../services/index');
 
 const cityService = new CityService();
@@ -80,4 +81,12 @@ const getCity = async(req,res) => {
             err:error
         })
     }
+}
+
+
+module.exports = {
+    createCity,
+    deleteCity,
+    updateCity,
+    getCity
 }

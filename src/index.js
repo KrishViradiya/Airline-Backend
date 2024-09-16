@@ -2,6 +2,7 @@ const express = require('express');
 const {PORT} = require('./config/serverConfig')
 const bodyParser = require('body-parser');
 
+const apiRoutes = require("./routes/index");
 
 const setupAndStartServer = async() => {
     //creating app object
@@ -16,6 +17,7 @@ const setupAndStartServer = async() => {
         
     })
 
+    app.use('/api',apiRoutes)
     
 
 
