@@ -40,13 +40,27 @@ class CityRepository {
         }
     }
 
-    async getCity(cityId){
+    // async getCity(cityId){
+    //     try {
+        
+    //         const city = await City.findByPk(cityId)
+    //         return city;
+    //     } catch (error) {
+    //         console.log("Error while fetching particular city");
+    //         throw error;
+    //     }
+    // }
+
+    async getCity(cityId) {
         try {
-            const city = await City.findByPk(cityId)
-            return city
+            const city = await City.findByPk(cityId);
+            if (!city) {
+                throw new Error(`City with id ${cityId} not found`);
+            }
+            return city;
         } catch (error) {
-            console.log("Error while fetching particular city");
-            throw {error}
+            console.log("Error while fetching particular city:", error.message);
+            throw error;
         }
     }
 }
