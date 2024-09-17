@@ -17,9 +17,9 @@ const setupAndStartServer = async() => {
     app.listen( PORT, async () => {
         
         console.log(`Server is started and listening on port ${PORT}`);
-        if(process.env.SYNC_DB){
-            db.sequelize.sync({alter:true});   // we do not have to always run this command , once it is okay
-        }
+        // if(process.env.SYNC_DB){
+        //     db.sequelize.sync({alter:true});   // we do not have to always run this command , once it is okay
+        // }
         // const city = await City.findOne({
         //     where:{
         //        id:4
