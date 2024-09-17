@@ -28,6 +28,8 @@ class CityRepository {
 
     async updateCity(cityId,data){
         try {
+            // The below approach also works but it wont return an updated object 
+            // if we are using Pg then returning : true can be used, else not
             // const city = await City.update(data, {
             //     where:{
             //         id:cityId
@@ -65,6 +67,16 @@ class CityRepository {
         } catch (error) {
             console.log("Error while fetching particular city:", error.message);
             throw error;
+        }
+    }
+
+    async getAllCities(){
+        try {
+            const cities = await City.findAll();
+            return cities;
+        } catch (error) {
+            console.log("Error while fetching all cities in repository");
+            throw {error}
         }
     }
 }
