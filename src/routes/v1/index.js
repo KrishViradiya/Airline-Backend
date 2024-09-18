@@ -1,6 +1,7 @@
 // handlling all the v1 apis here
 const CityController = require('../../controllers/city-controller');
 const FlightController = require('../../controllers/flight-controller');
+const AirportController = require('../../controllers/airport-controller');
 const express = require('express');
 
 const router = express.Router();
@@ -13,5 +14,7 @@ router.get('/city',CityController.getAllCities);
 
 router.post('/flights', FlightController.createFlight);
 router.get('/flights',FlightController.getAllFlights);
+
+router.post('/airports',AirportController.create);
 
 module.exports = router;

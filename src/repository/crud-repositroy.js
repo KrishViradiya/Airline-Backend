@@ -1,5 +1,4 @@
 class CrudRepository {
-
     constructor(model){
         this.model = model;
     }
@@ -16,11 +15,7 @@ class CrudRepository {
 
     async delete(modelId){
         try {
-            const response = await this.model.destroy({
-                where:{
-                    id:modelId
-                }
-            })
+            const response = await this.model.destroy(modelId)
             return response;
         } catch (error) {
             console.log("Something went wrong in crud repository");
